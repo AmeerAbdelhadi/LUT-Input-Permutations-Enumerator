@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : reference
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:45:49 2011
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO21D1             tcbn65lpwc     2.520000       2      5.040000  
+AOI21D1            tcbn65lpwc     2.160000       3      6.480000  
+AOI22D0            tcbn65lpwc     2.520000       1      2.520000  
+AOI22D1            tcbn65lpwc     2.520000       4     10.080000  
+AOI32D1            tcbn65lpwc     2.880000       2      5.760000  
+AOI211D0           tcbn65lpwc     2.520000       1      2.520000  
+AOI211D1           tcbn65lpwc     2.520000       1      2.520000  
+CKND0              tcbn65lpwc     1.080000      57     61.560002  
+CKND2D0            tcbn65lpwc     1.440000      15     21.600001  
+CKXOR2D1           tcbn65lpwc     3.600000       4     14.400000  
+FA1D0              tcbn65lpwc     9.000000       4     36.000000  r
+IAO21D0            tcbn65lpwc     2.520000       5     12.600000  
+INVD1              tcbn65lpwc     1.080000       3      3.240000  
+IOA21D0            tcbn65lpwc     2.520000       1      2.520000  
+IOA21D1            tcbn65lpwc     2.520000       1      2.520000  
+MAOI222D0          tcbn65lpwc     2.880000      58    167.040007  
+MAOI222D1          tcbn65lpwc     2.880000      52    149.760006  
+MUX2ND0            tcbn65lpwc     2.880000       1      2.880000  
+NR2D0              tcbn65lpwc     1.440000      12     17.280001  
+NR2D1              tcbn65lpwc     1.440000      30     43.200002  
+OA22D0             tcbn65lpwc     2.880000       1      2.880000  
+OAI21D0            tcbn65lpwc     2.160000       4      8.640000  
+OAI21D1            tcbn65lpwc     2.160000      10     21.600001  
+OAI22D1            tcbn65lpwc     2.520000      14     35.280000  
+OAI31D1            tcbn65lpwc     2.520000       1      2.520000  
+OAI32D1            tcbn65lpwc     2.880000       2      5.760000  
+OAI211D0           tcbn65lpwc     2.520000       6     15.120000  
+OAI211D1           tcbn65lpwc     2.520000       1      2.520000  
+OAI222D0           tcbn65lpwc     3.240000       3      9.720000  
+OR2D0              tcbn65lpwc     2.160000       1      2.160000  
+XNR2D1             tcbn65lpwc     3.600000       4     14.400000  
+XNR3D1             tcbn65lpwc     6.120000       1      6.120000  
+XOR3D0             tcbn65lpwc     6.120000       1      6.120000  
+-----------------------------------------------------------------------------
+Total 33 references                                   702.360019
+1

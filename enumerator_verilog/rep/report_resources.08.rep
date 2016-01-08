@@ -1,0 +1,194 @@
+ 
+****************************************
+Report : resources
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:45:49 2011
+****************************************
+
+
+Resource Report for this hierarchy in file ./cmpGrt.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| gt_x_38_1      | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[1].CMPGRT/gt_38 |
+| add_x_26_1     | DW01_add       | width=2    | COUNTONESi[5].COUNTONES/add_28_S4_I2 |
+| gt_x_38_2      | DW_cmp         | width=6    | CMPGRTi[6].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_3      | DW_cmp         | width=6    | CMPGRTi[5].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_4      | DW_cmp         | width=6    | CMPGRTi[5].CMPGRTj[6].CMPGRT/gt_38 |
+| gt_x_38_5      | DW_cmp         | width=6    | CMPGRTi[4].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_6      | DW_cmp         | width=6    | CMPGRTi[4].CMPGRTj[6].CMPGRT/gt_38 |
+| gt_x_38_7      | DW_cmp         | width=6    | CMPGRTi[4].CMPGRTj[5].CMPGRT/gt_38 |
+| gt_x_38_8      | DW_cmp         | width=6    | CMPGRTi[3].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_9      | DW_cmp         | width=6    | CMPGRTi[3].CMPGRTj[6].CMPGRT/gt_38 |
+| gt_x_38_10     | DW_cmp         | width=6    | CMPGRTi[3].CMPGRTj[5].CMPGRT/gt_38 |
+| gt_x_38_11     | DW_cmp         | width=6    | CMPGRTi[3].CMPGRTj[4].CMPGRT/gt_38 |
+| gt_x_38_12     | DW_cmp         | width=6    | CMPGRTi[2].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_13     | DW_cmp         | width=6    | CMPGRTi[2].CMPGRTj[6].CMPGRT/gt_38 |
+| gt_x_38_14     | DW_cmp         | width=6    | CMPGRTi[2].CMPGRTj[5].CMPGRT/gt_38 |
+| gt_x_38_15     | DW_cmp         | width=6    | CMPGRTi[2].CMPGRTj[4].CMPGRT/gt_38 |
+| gt_x_38_16     | DW_cmp         | width=6    | CMPGRTi[2].CMPGRTj[3].CMPGRT/gt_38 |
+| gt_x_38_17     | DW_cmp         | width=6    | CMPGRTi[1].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_18     | DW_cmp         | width=6    | CMPGRTi[1].CMPGRTj[6].CMPGRT/gt_38 |
+| gt_x_38_19     | DW_cmp         | width=6    | CMPGRTi[1].CMPGRTj[5].CMPGRT/gt_38 |
+| gt_x_38_20     | DW_cmp         | width=6    | CMPGRTi[1].CMPGRTj[4].CMPGRT/gt_38 |
+| gt_x_38_21     | DW_cmp         | width=6    | CMPGRTi[1].CMPGRTj[3].CMPGRT/gt_38 |
+| gt_x_38_22     | DW_cmp         | width=6    | CMPGRTi[1].CMPGRTj[2].CMPGRT/gt_38 |
+| gt_x_38_23     | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[7].CMPGRT/gt_38 |
+| gt_x_38_24     | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[6].CMPGRT/gt_38 |
+| gt_x_38_25     | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[5].CMPGRT/gt_38 |
+| gt_x_38_26     | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[4].CMPGRT/gt_38 |
+| gt_x_38_27     | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[3].CMPGRT/gt_38 |
+| gt_x_38_28     | DW_cmp         | width=6    | CMPGRTi[0].CMPGRTj[2].CMPGRT/gt_38 |
+| add_x_26_2     | DW01_add       | width=2    | COUNTONESi[0].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I6 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I7 |
+| add_x_26_3     | DW01_add       | width=2    | COUNTONESi[0].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I6 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I7 |
+| add_x_26_4     | DW01_add       | width=2    | COUNTONESi[0].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I6 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I7 |
+| add_x_26_5     | DW01_add       | width=3    | COUNTONESi[0].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I6 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I7 |
+| add_x_26_6     | DW01_add       | width=3    | COUNTONESi[0].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I6 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I7 |
+| add_x_26_7     | DW01_add       | width=3    | COUNTONESi[0].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I6 |
+       |                |            | COUNTONESi[0].COUNTONES/add_28_S4_I7 |
+| add_x_26_8     | DW01_add       | width=2    | COUNTONESi[1].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I6 |
+| add_x_26_9     | DW01_add       | width=2    | COUNTONESi[1].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I6 |
+| add_x_26_10    | DW01_add       | width=2    | COUNTONESi[1].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I6 |
+| add_x_26_11    | DW01_add       | width=3    | COUNTONESi[1].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I6 |
+| add_x_26_12    | DW01_add       | width=3    | COUNTONESi[1].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I5 |
+       |                |            | COUNTONESi[1].COUNTONES/add_28_S4_I6 |
+| add_x_26_13    | DW01_add       | width=2    | COUNTONESi[2].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I5 |
+| add_x_26_14    | DW01_add       | width=2    | COUNTONESi[2].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I5 |
+| add_x_26_15    | DW01_add       | width=3    | COUNTONESi[2].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I5 |
+| add_x_26_16    | DW01_add       | width=3    | COUNTONESi[2].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I4 |
+       |                |            | COUNTONESi[2].COUNTONES/add_28_S4_I5 |
+| add_x_26_17    | DW01_add       | width=2    | COUNTONESi[3].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[3].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[3].COUNTONES/add_28_S4_I4 |
+| add_x_26_18    | DW01_add       | width=2    | COUNTONESi[3].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[3].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[3].COUNTONES/add_28_S4_I4 |
+| add_x_26_19    | DW01_add       | width=3    | COUNTONESi[3].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[3].COUNTONES/add_28_S4_I3 |
+       |                |            | COUNTONESi[3].COUNTONES/add_28_S4_I4 |
+| add_x_26_20    | DW01_add       | width=2    | COUNTONESi[4].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[4].COUNTONES/add_28_S4_I3 |
+| add_x_26_21    | DW01_add       | width=2    | COUNTONESi[4].COUNTONES/add_28_S4_I2 |
+       |                |            | COUNTONESi[4].COUNTONES/add_28_S4_I3 |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| gt_x_38_1          | DW_cmp           | apparch (area)     |                |
+| add_x_26_1         | DW01_add         | apparch (area)     |                |
+| gt_x_38_2          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_3          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_4          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_5          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_6          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_7          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_8          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_9          | DW_cmp           | apparch (area)     |                |
+| gt_x_38_10         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_11         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_12         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_13         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_14         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_15         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_16         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_17         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_18         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_19         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_20         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_21         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_22         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_23         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_24         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_25         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_26         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_27         | DW_cmp           | apparch (area)     |                |
+| gt_x_38_28         | DW_cmp           | apparch (area)     |                |
+| add_x_26_2         | DW01_add         | apparch (area)     |                |
+| add_x_26_3         | DW01_add         | apparch (area)     |                |
+| add_x_26_4         | DW01_add         | apparch (area)     |                |
+| add_x_26_5         | DW01_add         | apparch (area)     |                |
+| add_x_26_6         | DW01_add         | apparch (area)     |                |
+| add_x_26_7         | DW01_add         | apparch (area)     |                |
+| add_x_26_8         | DW01_add         | apparch (area)     |                |
+| add_x_26_9         | DW01_add         | apparch (area)     |                |
+| add_x_26_10        | DW01_add         | apparch (area)     |                |
+| add_x_26_11        | DW01_add         | apparch (area)     |                |
+| add_x_26_12        | DW01_add         | apparch (area)     |                |
+| add_x_26_13        | DW01_add         | apparch (area)     |                |
+| add_x_26_14        | DW01_add         | apparch (area)     |                |
+| add_x_26_15        | DW01_add         | apparch (area)     |                |
+| add_x_26_16        | DW01_add         | apparch (area)     |                |
+| add_x_26_17        | DW01_add         | apparch (area)     |                |
+| add_x_26_18        | DW01_add         | apparch (area)     |                |
+| add_x_26_19        | DW01_add         | apparch (area)     |                |
+| add_x_26_20        | DW01_add         | apparch (area)     |                |
+| add_x_26_21        | DW01_add         | apparch (area)     |                |
+===============================================================================
+
+
+No multiplexors to report
+1

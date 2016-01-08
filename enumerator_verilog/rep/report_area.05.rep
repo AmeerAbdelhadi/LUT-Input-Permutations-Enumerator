@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:30:18 2011
+****************************************
+
+Library(s) Used:
+
+    tcbn65lpwc (File: /CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lpwc.db)
+
+Number of ports:                           36
+Number of nets:                           129
+Number of cells:                           98
+Number of combinational cells:             98
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                         28
+Number of references:                      11
+
+Combinational area:        219.960007
+Noncombinational area:       0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:           219.960007
+Total area:                 undefined
+1

@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:36:35 2011
+****************************************
+
+Operating Conditions: WCCOM   Library: tcbn65lpwc
+Wire Load Model Mode: segmented
+
+  Startpoint: prm[31] (input port)
+  Endpoint: enm[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  enumerate          ZeroWireload          tcbn65lpwc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  prm[31] (in)                             0.00       0.00 f
+  U71/ZN (CKND0)                           0.12       0.12 r
+  U169/ZN (MAOI222D1)                      0.16       0.28 f
+  U168/ZN (MAOI222D1)                      0.15       0.42 r
+  U167/ZN (MAOI222D1)                      0.14       0.57 f
+  U166/ZN (MAOI222D1)                      0.14       0.70 r
+  U165/ZN (MAOI222D1)                      0.16       0.87 f
+  U177/S (FA1D0)                           0.29       1.16 f
+  U178/CO (FA1D0)                          0.28       1.44 f
+  U40/ZN (CKND0)                           0.06       1.50 r
+  U39/ZN (CKND2D0)                         0.07       1.57 f
+  U81/ZN (OAI21D1)                         0.05       1.62 r
+  enm[6] (out)                             0.00       1.62 r
+  data arrival time                                   1.62
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

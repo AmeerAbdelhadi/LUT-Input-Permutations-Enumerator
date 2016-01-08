@@ -1,0 +1,4 @@
+enumerate      @ ./enumerate.v
+  cmpGrt      @ ./cmpGrt.v
+    DW01_cmp2      @ 
+  countOnes      @ ./countOnes.v

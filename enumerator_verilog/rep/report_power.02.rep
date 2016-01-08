@@ -1,0 +1,44 @@
+Loading db file '/CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lpwc.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:17:40 2011
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lpwc (File: /CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lpwc.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65lpwc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+enumerate              ZeroWireload      tcbn65lpwc
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   2.7440 uW   (73%)
+  Net Switching Power  =   1.0087 uW   (27%)
+                         ---------
+Total Dynamic Power    =   3.7526 uW  (100%)
+
+Cell Leakage Power     =   3.6485 nW
+
+1

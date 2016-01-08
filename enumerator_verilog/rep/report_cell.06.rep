@@ -1,0 +1,162 @@
+ 
+****************************************
+Report : cell
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:36:35 2011
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U38                       CKND2D0         tcbn65lpwc      1.440000  
+U39                       CKND2D0         tcbn65lpwc      1.440000  
+U40                       CKND0           tcbn65lpwc      1.080000  
+U41                       CKND0           tcbn65lpwc      1.080000  
+U42                       CKND0           tcbn65lpwc      1.080000  
+U43                       CKND0           tcbn65lpwc      1.080000  
+U44                       CKND0           tcbn65lpwc      1.080000  
+U45                       CKND0           tcbn65lpwc      1.080000  
+U46                       CKND0           tcbn65lpwc      1.080000  
+U47                       CKND0           tcbn65lpwc      1.080000  
+U48                       CKND0           tcbn65lpwc      1.080000  
+U49                       CKND2D0         tcbn65lpwc      1.440000  
+U50                       CKND2D0         tcbn65lpwc      1.440000  
+U51                       CKND2D0         tcbn65lpwc      1.440000  
+U52                       CKND0           tcbn65lpwc      1.080000  
+U53                       CKND0           tcbn65lpwc      1.080000  
+U54                       CKND0           tcbn65lpwc      1.080000  
+U55                       CKND0           tcbn65lpwc      1.080000  
+U56                       CKND2D0         tcbn65lpwc      1.440000  
+U57                       CKND0           tcbn65lpwc      1.080000  
+U58                       CKND0           tcbn65lpwc      1.080000  
+U59                       CKND0           tcbn65lpwc      1.080000  
+U60                       CKND0           tcbn65lpwc      1.080000  
+U61                       CKND0           tcbn65lpwc      1.080000  
+U62                       CKND0           tcbn65lpwc      1.080000  
+U63                       CKND0           tcbn65lpwc      1.080000  
+U64                       CKND0           tcbn65lpwc      1.080000  
+U65                       CKND0           tcbn65lpwc      1.080000  
+U66                       CKND0           tcbn65lpwc      1.080000  
+U67                       CKND0           tcbn65lpwc      1.080000  
+U68                       CKND0           tcbn65lpwc      1.080000  
+U69                       CKND0           tcbn65lpwc      1.080000  
+U70                       CKND0           tcbn65lpwc      1.080000  
+U71                       CKND0           tcbn65lpwc      1.080000  
+U72                       CKND0           tcbn65lpwc      1.080000  
+U73                       CKND0           tcbn65lpwc      1.080000  
+U74                       CKND0           tcbn65lpwc      1.080000  
+U75                       CKND0           tcbn65lpwc      1.080000  
+U76                       CKND0           tcbn65lpwc      1.080000  
+U77                       CKND0           tcbn65lpwc      1.080000  
+U78                       CKND0           tcbn65lpwc      1.080000  
+U79                       AOI32D1         tcbn65lpwc      2.880000  
+U80                       XNR2D1          tcbn65lpwc      3.600000  
+U81                       OAI21D1         tcbn65lpwc      2.160000  
+U82                       MAOI222D1       tcbn65lpwc      2.880000  
+U83                       MAOI222D1       tcbn65lpwc      2.880000  
+U84                       MAOI222D1       tcbn65lpwc      2.880000  
+U85                       MAOI222D1       tcbn65lpwc      2.880000  
+U86                       MAOI222D1       tcbn65lpwc      2.880000  
+U87                       NR2D1           tcbn65lpwc      1.440000  
+U88                       MAOI222D1       tcbn65lpwc      2.880000  
+U89                       MAOI222D1       tcbn65lpwc      2.880000  
+U90                       MAOI222D1       tcbn65lpwc      2.880000  
+U91                       MAOI222D1       tcbn65lpwc      2.880000  
+U92                       MAOI222D1       tcbn65lpwc      2.880000  
+U93                       NR2D1           tcbn65lpwc      1.440000  
+U94                       MAOI222D1       tcbn65lpwc      2.880000  
+U95                       MAOI222D1       tcbn65lpwc      2.880000  
+U96                       MAOI222D1       tcbn65lpwc      2.880000  
+U97                       MAOI222D1       tcbn65lpwc      2.880000  
+U98                       MAOI222D1       tcbn65lpwc      2.880000  
+U99                       NR2D1           tcbn65lpwc      1.440000  
+U100                      MAOI222D1       tcbn65lpwc      2.880000  
+U101                      MAOI222D1       tcbn65lpwc      2.880000  
+U102                      MAOI222D1       tcbn65lpwc      2.880000  
+U103                      MAOI222D1       tcbn65lpwc      2.880000  
+U104                      MAOI222D1       tcbn65lpwc      2.880000  
+U105                      NR2D1           tcbn65lpwc      1.440000  
+U106                      MAOI222D1       tcbn65lpwc      2.880000  
+U107                      MAOI222D1       tcbn65lpwc      2.880000  
+U108                      MAOI222D1       tcbn65lpwc      2.880000  
+U109                      MAOI222D1       tcbn65lpwc      2.880000  
+U110                      MAOI222D1       tcbn65lpwc      2.880000  
+U111                      NR2D1           tcbn65lpwc      1.440000  
+U112                      MAOI222D1       tcbn65lpwc      2.880000  
+U113                      MAOI222D1       tcbn65lpwc      2.880000  
+U114                      MAOI222D1       tcbn65lpwc      2.880000  
+U115                      MAOI222D1       tcbn65lpwc      2.880000  
+U116                      OAI32D1         tcbn65lpwc      2.880000  
+U117                      NR2D1           tcbn65lpwc      1.440000  
+U118                      OA21D1          tcbn65lpwc      2.520000  
+U119                      OAI211D1        tcbn65lpwc      2.520000  
+U120                      CKXOR2D1        tcbn65lpwc      3.600000  
+U121                      CKXOR2D1        tcbn65lpwc      3.600000  
+U122                      MAOI222D1       tcbn65lpwc      2.880000  
+U123                      MAOI222D1       tcbn65lpwc      2.880000  
+U124                      MAOI222D1       tcbn65lpwc      2.880000  
+U125                      MAOI222D1       tcbn65lpwc      2.880000  
+U126                      MAOI222D1       tcbn65lpwc      2.880000  
+U127                      NR2D1           tcbn65lpwc      1.440000  
+U128                      MAOI222D1       tcbn65lpwc      2.880000  
+U129                      MAOI222D1       tcbn65lpwc      2.880000  
+U130                      MAOI222D1       tcbn65lpwc      2.880000  
+U131                      MAOI222D1       tcbn65lpwc      2.880000  
+U132                      MAOI222D1       tcbn65lpwc      2.880000  
+U133                      NR2D1           tcbn65lpwc      1.440000  
+U134                      MAOI222D1       tcbn65lpwc      2.880000  
+U135                      MAOI222D1       tcbn65lpwc      2.880000  
+U136                      MAOI222D1       tcbn65lpwc      2.880000  
+U137                      MAOI222D1       tcbn65lpwc      2.880000  
+U138                      MAOI222D1       tcbn65lpwc      2.880000  
+U139                      NR2D1           tcbn65lpwc      1.440000  
+U140                      MAOI222D1       tcbn65lpwc      2.880000  
+U141                      MAOI222D1       tcbn65lpwc      2.880000  
+U142                      MAOI222D1       tcbn65lpwc      2.880000  
+U143                      MAOI222D1       tcbn65lpwc      2.880000  
+U144                      MAOI222D1       tcbn65lpwc      2.880000  
+U145                      NR2D1           tcbn65lpwc      1.440000  
+U146                      MAOI222D1       tcbn65lpwc      2.880000  
+U147                      MAOI222D1       tcbn65lpwc      2.880000  
+U148                      MAOI222D1       tcbn65lpwc      2.880000  
+U149                      MAOI222D1       tcbn65lpwc      2.880000  
+U150                      MAOI222D1       tcbn65lpwc      2.880000  
+U151                      NR2D1           tcbn65lpwc      1.440000  
+U152                      MAOI222D1       tcbn65lpwc      2.880000  
+U153                      MAOI222D1       tcbn65lpwc      2.880000  
+U154                      MAOI222D1       tcbn65lpwc      2.880000  
+U155                      MAOI222D1       tcbn65lpwc      2.880000  
+U156                      MAOI222D1       tcbn65lpwc      2.880000  
+U157                      NR2D1           tcbn65lpwc      1.440000  
+U158                      INVD1           tcbn65lpwc      1.080000  
+U159                      MAOI222D1       tcbn65lpwc      2.880000  
+U160                      MAOI222D1       tcbn65lpwc      2.880000  
+U161                      MAOI222D1       tcbn65lpwc      2.880000  
+U162                      MAOI222D1       tcbn65lpwc      2.880000  
+U163                      MAOI222D1       tcbn65lpwc      2.880000  
+U164                      NR2D1           tcbn65lpwc      1.440000  
+U165                      MAOI222D1       tcbn65lpwc      2.880000  
+U166                      MAOI222D1       tcbn65lpwc      2.880000  
+U167                      MAOI222D1       tcbn65lpwc      2.880000  
+U168                      MAOI222D1       tcbn65lpwc      2.880000  
+U169                      MAOI222D1       tcbn65lpwc      2.880000  
+U170                      NR2D1           tcbn65lpwc      1.440000  
+U171                      MAOI222D1       tcbn65lpwc      2.880000  
+U172                      MAOI222D1       tcbn65lpwc      2.880000  
+U173                      MAOI222D1       tcbn65lpwc      2.880000  
+U174                      MAOI222D1       tcbn65lpwc      2.880000  
+U175                      MAOI222D1       tcbn65lpwc      2.880000  
+U176                      NR2D1           tcbn65lpwc      1.440000  
+U177                      FA1D0           tcbn65lpwc      9.000000  r
+U178                      FA1D0           tcbn65lpwc      9.000000  r
+U179                      FA1D0           tcbn65lpwc      9.000000  r
+--------------------------------------------------------------------------------
+Total 142 cells                                           333.000011
+1

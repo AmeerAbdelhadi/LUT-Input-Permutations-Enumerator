@@ -1,0 +1,472 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+           Version E-2010.12-SP2 for linux -- Feb 25, 2011
+               Copyright (c) 1988-2011 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+#####################################
+# Synopsys  DC  configuration  file #
+# invoke: dc_shell-t -f ./syn.dctcl #
+# Ameer Abdelhadi; ameer@ece.ubc.ca #
+#####################################
+proc execWait {delay_sec} {
+  fconfigure stdin -blocking 0
+  for {set i 1} {$i<=$delay_sec} {incr i} {
+    after 1000 
+    gets stdin
+    set isBlocked [eval fblocked stdin]
+    if {!$isBlocked} {break}
+    set numbering "[$i]"
+    set backSpace ""
+    set backSpace [eval string repeat "\b" [string length $numbering]]
+    echo -n "$numbering"
+    if {$i < $delay_sec} {echo -n "$backSpace"} else {echo ""}
+  }
+  fconfigure stdin -blocking 1
+  return $isBlocked
+}
+date
+Mon Jun 20 16:44:35 2011
+global env
+# set tools and pdk links
+set SYNOPSYS  $env(SYNOPSYS)
+/CMC/tools/synopsys/syn_vE-2010.12-SP2_linux
+set TSMC65NM  $env(TSMC65NM)
+/CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/
+set LIBNAME   $env(LIBNAME)
+tcbn65lpwc
+set LIBDB     $env(LIBDB)
+/CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital//Front_End/timing_power_noise/NLDM/tcbn65lp_200a/
+set TOPMOD    $env(TOPMOD)
+enumerate
+set RUNNUM    $env(RUNNUM)
+08
+set SYNLIB    $env(SYNLIB)
+/ubc/ece/home/gl/grads/ameer/permutations/syn
+set RTLLIB    $env(RTLLIB)
+./rtl
+set REPLIB    $env(REPLIB)
+./rep
+set LOGLIB    $env(LOGLIB)
+./log
+set STALIB    $env(STALIB)
+./sta
+set NETLIB    $env(NETLIB)
+./net
+set target_library      [list   $LIBDB/$LIBNAME.db                                               ]
+/CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital//Front_End/timing_power_noise/NLDM/tcbn65lp_200a//tcbn65lpwc.db
+set synthetic_library   [list                      dw_foundation.sldb                            ]
+dw_foundation.sldb
+set link_library        [list * $LIBDB/$LIBNAME.db dw_foundation.sldb                            ]
+* /CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital//Front_End/timing_power_noise/NLDM/tcbn65lp_200a//tcbn65lpwc.db dw_foundation.sldb
+set synlib_library_list {DW01 DW02 DW03 DW04 DW05 DW06                                           }
+DW01 DW02 DW03 DW04 DW05 DW06                                           
+set search_path         [list . $SYNOPSYS/libraries/syn $SYNOPSYS/dw/syn_ver $SYNOPSYS/dw/sim_ver]
+. /CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/libraries/syn /CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/dw/syn_ver /CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/dw/sim_ver
+define_design_lib ${TOPMOD}_lib -path ./${TOPMOD}_lib
+1
+#set verilogout_show_unconnected_pins "true"
+# analyze verilog
+source analyze_includes.dctcl
+Running PRESTO HDLC
+Compiling source file ./define.v
+Presto compilation completed successfully.
+Loading db file '/CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lpwc.db'
+Loading db file '/CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/libraries/syn/dw_foundation.sldb'
+1
+source analyze_modules.dctcl
+Running PRESTO HDLC
+Compiling source file ./enumerate.v
+Opening include file define.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./cmpGrt.v
+Opening include file define.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./countOnes.v
+Opening include file define.v
+Presto compilation completed successfully.
+1
+elaborate -lib ${TOPMOD}_lib $TOPMOD
+Loading db file '/CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/libraries/syn/gtech.db'
+Loading db file '/CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65lpwc'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'enumerate'.
+Information: Building the design 'cmpGrt' instantiated from design 'enumerate' with
+	the parameters "width=6". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=7". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=6". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=5". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=4". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=3". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=2". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'countOnes' instantiated from design 'enumerate' with
+	the parameters "width=1". (HDL-193)
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  ./countOnes.v:29: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+1
+current_design $TOPMOD
+Current design is 'enumerate'.
+{enumerate}
+link
+
+  Linking design 'enumerate'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /ubc/ece/home/gl/grads/ameer/permutations/syn/enumerate.db, etc
+  tcbn65lpwc (library)        /CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lpwc.db
+  dw_foundation.sldb (library) /CMC/tools/synopsys/syn_vE-2010.12-SP2_linux/libraries/syn/dw_foundation.sldb
+
+1
+uniquify
+Removing uniquified design 'cmpGrt_width6'.
+  Uniquified 28 instances of design 'cmpGrt_width6'.
+1
+##########################
+# set timing constraints #
+##########################
+#force DW instance U1 to "carry-look-ahead" */
+##set_implementation pparch U1
+#set_implementation rpl DWCMPGRT
+set_max_area 0.0
+1
+#set_dont_use [get_lib_cells $LIBNAME/FA1D*]
+#set_dont_use [get_lib_cells $LIBNAME/*XOR*]
+#set_dont_use $LIBNAME/FA1D*
+#source set_dont_use.dctcl
+# check_design > $REPLIB/check_design.before_compile.rep
+redirect $REPLIB/check_design.before_compile.$RUNNUM.rep {check_design}
+echo -n "\r\nCompiling design in 5 seconds. Press 'Enter' to stop execution. "; set notPressed [execWait 5]
+
+Compiling design in 5 seconds. Press 'Enter' to stop execution. [1][2][3][4][5]
+1
+if {$notPressed} {
+
+  # compile design to force implementations
+  compile_ultra
+  # compile_ultra -area_high_effort_script
+  # compile_ultra -no_design_rule -area_high_effort_script
+  # compile_ultra -incremental
+  # compile -ungroup_all -map_effort medium
+  # compile -incremental_mapping -map_effort medium
+  # compile [-incr]
+  # compile -area_effort none
+  # compile -area_effort high -ungroup_all
+  
+  ungroup -flatten -all
+
+  redirect $REPLIB/check_design.after_compile.$RUNNUM.rep {check_design                    }
+  redirect $REPLIB/report_constraint.$RUNNUM.rep          {report_constraint -all_violators}
+  redirect $REPLIB/report_area.$RUNNUM.rep                {report_area                     }
+  redirect $REPLIB/report_design.$RUNNUM.rep              {report_design                   }
+  redirect $REPLIB/report_port.$RUNNUM.rep                {report_port                     }
+  redirect $REPLIB/report_clocks.$RUNNUM.rep              {report_clocks                   }
+  redirect $REPLIB/report_cell.$RUNNUM.rep                {report_cell                     }
+  redirect $REPLIB/report_timing.$RUNNUM.rep              {report_timing                   }
+  redirect $REPLIB/report_power.$RUNNUM.rep               {report_power                    }
+  redirect $REPLIB/report_ref.$RUNNUM.rep                 {report_ref                      }
+  redirect $REPLIB/report_resources.$RUNNUM.rep           {report_resources                }
+
+
+  # write timing constraints
+  write_sdc $STALIB/${TOPMOD}.$RUNNUM.stc
+
+  # write verilog netlist
+  change_names -rules verilog
+  write -format verilog -out $NETLIB/${TOPMOD}_gates.$RUNNUM.vh
+}
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | E-2010.12-DWBB_201012.2 |     *     |
+| Licensed DW Building Blocks        | E-2010.12-DWBB_201012.2 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/tcbn65lpwc.db.alib'
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[1].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[0].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[1].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[2].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[3].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[4].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[5].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy COUNTONESi[6].COUNTONES before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[6].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[5].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[5].CMPGRTj[6].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[4].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[4].CMPGRTj[6].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[4].CMPGRTj[5].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[3].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[3].CMPGRTj[6].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[3].CMPGRTj[5].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[3].CMPGRTj[4].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[2].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[2].CMPGRTj[6].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[2].CMPGRTj[5].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[2].CMPGRTj[4].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[2].CMPGRTj[3].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[1].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[1].CMPGRTj[6].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[1].CMPGRTj[5].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[1].CMPGRTj[4].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[1].CMPGRTj[3].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[1].CMPGRTj[2].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[7].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[6].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[5].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[4].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[3].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy CMPGRTi[0].CMPGRTj[2].CMPGRT before Pass 1 (OPT-776)
+Information: Ungrouping 35 of 36 hierarchies before Pass 1 (OPT-775)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'enumerate'
+Information: Added key list 'DesignWare' to design 'enumerate'. (DDB-72)
+ Implement Synthetic for 'enumerate'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Total 0 isolation cells are inserted. (UPF-214)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:20     711.4      0.00       0.0       0.0                          
+    0:00:25     711.4      0.00       0.0       0.0                          
+    0:00:25     711.4      0.00       0.0       0.0                          
+    0:00:26     711.4      0.00       0.0       0.0                          
+  Re-synthesis Optimization (Phase 1)
+  Re-synthesis Optimization (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+
+  Beginning Sequential Optimization
+  ---------------------------------
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+
+  Beginning Sequential Optimization
+  ---------------------------------
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+
+  Beginning Sequential Optimization
+  ---------------------------------
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:27     711.4      0.00       0.0       0.0                          
+    0:00:28     711.4      0.00       0.0       0.0                          
+    0:00:29     711.4      0.00       0.0       0.0                          
+    0:00:29     711.4      0.00       0.0       0.0                          
+    0:00:36     711.4      0.00       0.0       0.0                          
+    0:00:36     711.4      0.00       0.0       0.0                          
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:36     711.4      0.00       0.0       0.0                          
+    0:00:37     711.4      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:40     711.4      0.00       0.0       0.0                          
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+    0:00:41     702.4      0.00       0.0       0.0                          
+    0:00:41     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+    0:00:42     702.4      0.00       0.0       0.0                          
+Loading db file '/CMC/kits/tsmc_65nm_libs/tcbn65lp/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_200a/tcbn65lpwc.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+Writing verilog file '/ubc/ece/home/gl/grads/ameer/permutations/syn/net/enumerate_gates.08.vh'.
+1
+date
+Mon Jun 20 16:45:49 2011
+echo -n "\r\nExecution finished! Exiting in 5 seconds. Press 'Enter' to stop exiting. "; set notPressed [execWait 5]
+
+Execution finished! Exiting in 5 seconds. Press 'Enter' to stop exiting. [1][2][3][4][5]
+1
+if {$notPressed} {
+  exit
+}
+Information: Defining new variable 'notPressed'. (CMD-041)
+Information: Defining new variable 'SYNOPSYS'. (CMD-041)
+Information: Defining new variable 'REPLIB'. (CMD-041)
+Information: Defining new variable 'STALIB'. (CMD-041)
+Information: Defining new variable 'NETLIB'. (CMD-041)
+Information: Defining new variable 'RTLLIB'. (CMD-041)
+Information: Defining new variable 'TSMC65NM'. (CMD-041)
+Information: Defining new variable 'RUNNUM'. (CMD-041)
+Information: Defining new variable 'SYNLIB'. (CMD-041)
+Information: Defining new variable 'LIBNAME'. (CMD-041)
+Information: Defining new variable 'LIBDB'. (CMD-041)
+Information: Defining new variable 'TOPMOD'. (CMD-041)
+Information: Defining new variable 'LOGLIB'. (CMD-041)
+
+Thank you...

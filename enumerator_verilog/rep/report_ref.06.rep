@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : reference
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:36:41 2011
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI32D1            tcbn65lpwc     2.880000       1      2.880000  
+CKND0              tcbn65lpwc     1.080000      35     37.800002  
+CKND2D0            tcbn65lpwc     1.440000       6      8.640000  
+CKXOR2D1           tcbn65lpwc     3.600000       2      7.200000  
+FA1D0              tcbn65lpwc     9.000000       3     27.000000  r
+INVD1              tcbn65lpwc     1.080000       1      1.080000  
+MAOI222D1          tcbn65lpwc     2.880000      74    213.120008  
+NR2D1              tcbn65lpwc     1.440000      15     21.600001  
+OA21D1             tcbn65lpwc     2.520000       1      2.520000  
+OAI21D1            tcbn65lpwc     2.160000       1      2.160000  
+OAI32D1            tcbn65lpwc     2.880000       1      2.880000  
+OAI211D1           tcbn65lpwc     2.520000       1      2.520000  
+XNR2D1             tcbn65lpwc     3.600000       1      3.600000  
+-----------------------------------------------------------------------------
+Total 13 references                                   333.000011
+1

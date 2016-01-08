@@ -1,0 +1,20 @@
+ 
+****************************************
+check_design summary:
+Version:     E-2010.12-SP2
+Date:        Mon Jun 20 16:29:26 2011
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Feedthrough (LINT-29)                                           1
+
+Nets                                                                2
+    Unloaded nets (LINT-2)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'enumerate', net 'lehmer[0][2]' driven by pin 'COUNTONESi[0].COUNTONES/cnt[2]' has no loads. (LINT-2)
+Warning: In design 'enumerate', net 'lehmer[2][1]' driven by pin 'COUNTONESi[2].COUNTONES/cnt[1]' has no loads. (LINT-2)
+Warning: In design 'countOnes_width1', input port 'vec[0]' is connected directly to output port 'cnt[0]'. (LINT-29)
+1

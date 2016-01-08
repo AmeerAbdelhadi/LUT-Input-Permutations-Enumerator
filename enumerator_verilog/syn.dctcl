@@ -1,0 +1,125 @@
+#####################################
+# Synopsys  DC  configuration  file #
+# invoke: dc_shell-t -f ./syn.dctcl #
+# Ameer Abdelhadi; ameer@ece.ubc.ca #
+#####################################
+
+proc execWait {delay_sec} {
+  fconfigure stdin -blocking 0
+  for {set i 1} {$i<=$delay_sec} {incr i} {
+    after 1000 
+    gets stdin
+    set isBlocked [eval fblocked stdin]
+    if {!$isBlocked} {break}
+    set numbering "[$i]"
+    set backSpace ""
+    set backSpace [eval string repeat "\b" [string length $numbering]]
+    echo -n "$numbering"
+    if {$i < $delay_sec} {echo -n "$backSpace"} else {echo ""}
+  }
+  fconfigure stdin -blocking 1
+  return $isBlocked
+}
+
+date
+
+global env
+
+# set tools and pdk links
+set SYNOPSYS  $env(SYNOPSYS)
+set TSMC65NM  $env(TSMC65NM)
+set LIBNAME   $env(LIBNAME)
+set LIBDB     $env(LIBDB)
+set TOPMOD    $env(TOPMOD)
+set RUNNUM    $env(RUNNUM)
+set SYNLIB    $env(SYNLIB)
+set RTLLIB    $env(RTLLIB)
+set REPLIB    $env(REPLIB)
+set LOGLIB    $env(LOGLIB)
+set STALIB    $env(STALIB)
+set NETLIB    $env(NETLIB)
+
+set target_library      [list   $LIBDB/$LIBNAME.db                                               ]
+set synthetic_library   [list                      dw_foundation.sldb                            ]
+set link_library        [list * $LIBDB/$LIBNAME.db dw_foundation.sldb                            ]
+set synlib_library_list {DW01 DW02 DW03 DW04 DW05 DW06                                           }
+set search_path         [list . $SYNOPSYS/libraries/syn $SYNOPSYS/dw/syn_ver $SYNOPSYS/dw/sim_ver]
+
+define_design_lib ${TOPMOD}_lib -path ./${TOPMOD}_lib
+
+#set verilogout_show_unconnected_pins "true"
+
+
+# analyze verilog
+source analyze_includes.dctcl
+source analyze_modules.dctcl
+
+elaborate -lib ${TOPMOD}_lib $TOPMOD
+current_design $TOPMOD
+
+link
+uniquify
+
+##########################
+# set timing constraints #
+##########################
+
+#force DW instance U1 to "carry-look-ahead" */
+##set_implementation pparch U1
+#set_implementation rpl DWCMPGRT
+
+set_max_area 0.0
+#set_dont_use [get_lib_cells $LIBNAME/FA1D*]
+#set_dont_use [get_lib_cells $LIBNAME/*XOR*]
+#set_dont_use $LIBNAME/FA1D*
+
+#source set_dont_use.dctcl
+
+# check_design > $REPLIB/check_design.before_compile.rep
+redirect $REPLIB/check_design.before_compile.$RUNNUM.rep {check_design}
+
+echo -n "\r\nCompiling design in 5 seconds. Press 'Enter' to stop execution. "; set notPressed [execWait 5]
+
+if {$notPressed} {
+
+  # compile design to force implementations
+  compile_ultra
+  # compile_ultra -area_high_effort_script
+  # compile_ultra -no_design_rule -area_high_effort_script
+  # compile_ultra -incremental
+  # compile -ungroup_all -map_effort medium
+  # compile -incremental_mapping -map_effort medium
+  # compile [-incr]
+  # compile -area_effort none
+  # compile -area_effort high -ungroup_all
+  
+  ungroup -flatten -all
+
+  redirect $REPLIB/check_design.after_compile.$RUNNUM.rep {check_design                    }
+  redirect $REPLIB/report_constraint.$RUNNUM.rep          {report_constraint -all_violators}
+  redirect $REPLIB/report_area.$RUNNUM.rep                {report_area                     }
+  redirect $REPLIB/report_design.$RUNNUM.rep              {report_design                   }
+  redirect $REPLIB/report_port.$RUNNUM.rep                {report_port                     }
+  redirect $REPLIB/report_clocks.$RUNNUM.rep              {report_clocks                   }
+  redirect $REPLIB/report_cell.$RUNNUM.rep                {report_cell                     }
+  redirect $REPLIB/report_timing.$RUNNUM.rep              {report_timing                   }
+  redirect $REPLIB/report_power.$RUNNUM.rep               {report_power                    }
+  redirect $REPLIB/report_ref.$RUNNUM.rep                 {report_ref                      }
+  redirect $REPLIB/report_resources.$RUNNUM.rep           {report_resources                }
+
+
+  # write timing constraints
+  write_sdc $STALIB/${TOPMOD}.$RUNNUM.stc
+
+  # write verilog netlist
+  change_names -rules verilog
+  write -format verilog -out $NETLIB/${TOPMOD}_gates.$RUNNUM.vh
+}
+
+date
+
+echo -n "\r\nExecution finished! Exiting in 5 seconds. Press 'Enter' to stop exiting. "; set notPressed [execWait 5]
+
+if {$notPressed} {
+  exit
+}

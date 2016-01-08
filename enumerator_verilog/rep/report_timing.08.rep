@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:45:42 2011
+****************************************
+
+Operating Conditions: WCCOM   Library: tcbn65lpwc
+Wire Load Model Mode: segmented
+
+  Startpoint: prm[6] (input port)
+  Endpoint: enm[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  enumerate          ZeroWireload          tcbn65lpwc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  prm[6] (in)                              0.00       0.00 f
+  U216/ZN (CKND0)                          0.07       0.07 r
+  U127/ZN (NR2D0)                          0.06       0.13 f
+  U128/ZN (MAOI222D0)                      0.15       0.28 r
+  U130/ZN (IAO21D0)                        0.17       0.45 r
+  U131/ZN (MAOI222D0)                      0.11       0.56 f
+  U132/ZN (CKND2D0)                        0.08       0.64 r
+  U133/ZN (MAOI222D0)                      0.11       0.75 f
+  U134/ZN (MAOI222D0)                      0.20       0.95 r
+  U335/ZN (XNR2D1)                         0.21       1.16 r
+  U334/ZN (NR2D1)                          0.04       1.20 f
+  U316/Z (AO21D1)                          0.11       1.32 f
+  U388/CO (FA1D0)                          0.16       1.47 f
+  U204/ZN (CKND0)                          0.05       1.52 r
+  U387/ZN (MUX2ND0)                        0.08       1.60 f
+  U260/ZN (OAI21D1)                        0.08       1.68 r
+  U259/ZN (OAI211D1)                       0.09       1.77 f
+  enm[8] (out)                             0.00       1.77 f
+  data arrival time                                   1.77
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

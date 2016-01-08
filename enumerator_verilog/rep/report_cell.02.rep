@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : cell
+Design : enumerate
+Version: E-2010.12-SP2
+Date   : Mon Jun 20 16:17:34 2011
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        CKND0           tcbn65lpwc      1.080000  
+U4                        CKND0           tcbn65lpwc      1.080000  
+U5                        CKND0           tcbn65lpwc      1.080000  
+U6                        CKND0           tcbn65lpwc      1.080000  
+U7                        CKND0           tcbn65lpwc      1.080000  
+U8                        MAOI222D1       tcbn65lpwc      2.880000  
+U9                        MAOI222D1       tcbn65lpwc      2.880000  
+U10                       MAOI222D1       tcbn65lpwc      2.880000  
+U11                       MAOI222D1       tcbn65lpwc      2.880000  
+U12                       MAOI222D1       tcbn65lpwc      2.880000  
+U13                       IND2D1          tcbn65lpwc      2.160000  
+--------------------------------------------------------------------------------
+Total 11 cells                                            21.960001
+1
