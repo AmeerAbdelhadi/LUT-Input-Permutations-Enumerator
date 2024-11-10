@@ -10,6 +10,6 @@ A permutations enumerator circuit based on Lehmer's code; synthesis and verifica
 Please refer to the full paper for more information:
 
 **A. Abdelhadi and G. Lemieux, "Configuration Bitstream Reduction for SRAM-based FPGAs by Enumerating LUT Input Permutations," Proceedings of the International Conference on Reconfigurable Computing and FPGAs (Reconfig '11), pp. 20-26, Dec. 2011.**
- http://ece.ubc.ca/~ameer/publications/Abdelhadi-Conference-2011Dec-ReConfig2011-BitstreamReduction.pdf
-
-
+* **DOI:** http://dx.doi.org/10.1109/ReConFig.2011.20
+* **Paper:** https://www.ece.mcmaster.ca/~ameer/publications/Abdelhadi-Conference-2011Dec-ReConfig2011-BitstreamReduction.pdf
+* **Talk:** https://www.ece.mcmaster.ca/~ameer/publications/Abdelhadi-Talk-2011Dec-ReConfig2011-BitstreamReduction.pdf
